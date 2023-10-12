@@ -7,10 +7,27 @@
     <style>
         body { margin: 0; }
         canvas { display: block; }
+        #thumbnails {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;  /* ensure thumbnails are above the 3D viewer */
+        }
+        #thumbnails img {
+            width: 50px;   /* or desired thumbnail width */
+            height: 50px;  /* or desired thumbnail height */
+            margin-right: 10px;
+            cursor: pointer; /* indicate the images are clickable */
+        }
+
     </style>
-  <script type="module" crossorigin src="/view3d/assets/index-ceb60a6e.js"></script>
+  <script type="module" crossorigin src="/view3d/assets/index-24c93867.js"></script>
 </head>
 <body>
+    <div id="thumbnails">
+        <img src="sphynx.png" alt="Thumbnail 1" data-obj="SPHYNX888(3dviewer).obj" data-bg-color="#000000">
+        <img src="horse.png" alt="Thumbnail 2" data-obj="HorseJam999(keyboard).obj" data-bg-color="#ffffff">
+      </div>      
     
 </body>
 </html>
