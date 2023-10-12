@@ -7,9 +7,29 @@
     <style>
         body { margin: 0; }
         canvas { display: block; }
+        #thumbnails {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;  /* ensure thumbnails are above the 3D viewer */
+        }
+        #thumbnails img {
+            width: 50px;   /* or desired thumbnail width */
+            height: 50px;  /* or desired thumbnail height */
+            margin-right: 10px;
+            cursor: pointer; /* indicate the images are clickable */
+        }
+
     </style>
 </head>
 <body>
+    <div id="thumbnails">
+        <img src="sphynx.png" alt="Thumbnail 1" data-obj="SPHYNX888(3dviewer).obj" data-bg-color="#000000">
+        <img src="horse.png" alt="Thumbnail 2" data-obj="HorseJam999(keyboard).obj" data-bg-color="#ffffff">
+    </div>      
+    <div id="loadingScreen" style="position: absolute; width: 100%; height: 100%; background-color: rgba(255,255,255,0.8); display: flex; align-items: center; justify-content: center; z-index: 100;">
+        <p>Loading...</p>
+    </div>    
     <script type="module" src="script.js"></script>
 </body>
 </html>
